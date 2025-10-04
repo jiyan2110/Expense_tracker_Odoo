@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './AdminPanel.css';
 const API = 'http://localhost:4000/api';
 
 export default function AdminPanel({ token, user }) {

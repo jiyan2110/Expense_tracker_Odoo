@@ -1,0 +1,203 @@
+/* SubmitExpense.css */
+
+/* Main Container */
+.submit-expense-container {
+  padding: 32px 24px;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: calc(100vh - 60px);
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8f5e9 100%);
+}
+
+/* Page Title */
+.submit-expense-container h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #263238;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* Form Card */
+.submit-expense-form {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Form Groups */
+.submit-expense-form > div {
+  margin-bottom: 24px;
+}
+
+/* Labels */
+.submit-expense-form label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #546e7a;
+  margin-bottom: 8px;
+}
+
+/* Add icons to labels */
+.submit-expense-form label[for="amount"]::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23546e7a' viewBox='0 0 24 24'%3E%3Cpath d='M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.submit-expense-form label[for="currency"]::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23546e7a' viewBox='0 0 24 24'%3E%3Cpath d='M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.submit-expense-form label[for="category"]::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23546e7a' viewBox='0 0 24 24'%3E%3Cpath d='M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.submit-expense-form label[for="description"]::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23546e7a' viewBox='0 0 24 24'%3E%3Cpath d='M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.submit-expense-form label[for="receipt"]::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23546e7a' viewBox='0 0 24 24'%3E%3Cpath d='M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Input Fields */
+.submit-expense-form input[type="text"],
+.submit-expense-form input[type="number"],
+.submit-expense-form input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #cfd8dc;
+  border-radius: 12px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.submit-expense-form input[type="text"]:focus,
+.submit-expense-form input[type="number"]:focus,
+.submit-expense-form input:focus {
+  outline: none;
+  border-color: #26a69a;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(38, 166, 154, 0.1);
+}
+
+.submit-expense-form input::placeholder {
+  color: #b0bec5;
+}
+
+/* File Input */
+.submit-expense-form input[type="file"] {
+  padding: 12px 16px;
+  background: white;
+  cursor: pointer;
+  border: 2px dashed #cfd8dc;
+}
+
+.submit-expense-form input[type="file"]:hover {
+  border-color: #26a69a;
+  background: #f1f8e9;
+}
+
+/* Submit Button */
+.submit-expense-form button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #26a69a 0%, #00897b 100%);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 16px;
+}
+
+.submit-expense-form button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(38, 166, 154, 0.3);
+}
+
+.submit-expense-form button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* OCR Upload Section Spacing */
+.submit-expense-form > div:last-of-type {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 2px solid #e8f5e9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .submit-expense-container {
+    padding: 24px 20px;
+  }
+
+  .submit-expense-container h2 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .submit-expense-form {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .submit-expense-container {
+    padding: 20px 16px;
+  }
+
+  .submit-expense-container h2 {
+    font-size: 24px;
+  }
+
+  .submit-expense-form {
+    padding: 24px 20px;
+  }
+
+  .submit-expense-form input[type="text"],
+  .submit-expense-form input[type="number"],
+  .submit-expense-form input {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+}

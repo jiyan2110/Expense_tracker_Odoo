@@ -27,7 +27,7 @@ export default function Login({ onAuth }) {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Welcome Back 👋</h2>
+        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Welcome Back </h2>
         <form onSubmit={submit} className="space-y-5">
           <div>
             <label className="block text-sm font-medium text-gray-600">Email</label>

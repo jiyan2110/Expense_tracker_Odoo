@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './Dashboard.css';
 import { Link } from 'react-router-dom';
 const API = 'http://localhost:4000/api';
 
@@ -111,20 +112,23 @@ export default function Dashboard({ user, token }) {
         <div className="flex flex-wrap gap-4">
           <Link
             to="/submit"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition"
+            className="bg-teal-500 hover:bg-teal-600 text-white px-4 py-2 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-300"
+
           >
             Submit New Expense
           </Link>
           <Link
             to="/approvals"
-            className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition"
+className="bg-teal-500 hover:bg-teal-600 text-white px-5 py-2.5 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-300"
+
+
           >
             Review Approvals
           </Link>
           {user?.role === 'Admin' && (
             <Link
               to="/admin"
-              className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg font-medium transition"
+              className="bg-teal-500 hover:bg-teal-600 text-white px-5 py-2.5 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-300"
             >
               Admin Panel
             </Link>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Signup.css';
 const API = 'http://localhost:4000/api';
 
 export default function Signup({ onAuth }) {
@@ -69,7 +70,7 @@ export default function Signup({ onAuth }) {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Create an Account ✨</h2>
+        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Create an Account </h2>
         <form onSubmit={submit} className="space-y-5">
           <div>
             <label className="block text-sm font-medium text-gray-600">Name</label>

@@ -1,35 +1,11 @@
-# Node modules
-node_modules/
+# Ignore backend dependencies and environment variables
+backend/node_modules
+backend/.env
 
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Ignore frontend dependencies and environment variables
+frontend/node_modules
+frontend/.env
 
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
-
-# dotenv environment variables file
-.env
-
-# OS-specific files
+# Ignore OS and editor files
 .DS_Store
 Thumbs.db
-
-# Build / coverage
-dist/
-build/
-coverage/
-
-# Editor folders
-.vscode/
-.idea/
-
-# Temporary files
-*.tmp
-*.swp

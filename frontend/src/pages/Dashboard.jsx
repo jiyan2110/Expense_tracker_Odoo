@@ -5,13 +5,28 @@ export default function Dashboard({ user }) {
   const [expenses, setExpenses] = useState([]);
 
   useEffect(() => {
+    // Dashboard.jsx (AFTER)
+
     async function load() {
       const token = localStorage.getItem('token');
-      const res = await fetch(`${API}/expenses`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      const j = await res.json();
-      setExpenses(j);
+      try {
+        const res = await fetch(`${API}/expenses`, {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        
+        // Check if the response was successful (status code 200-299)
+        if (res.ok) {
+          const data = await res.json();
+          setExpenses(data); // This will be an array
+        } else {
+          // If there's an error (like 401), log it and keep expenses as an empty array
+          console.error("Failed to fetch expenses:", res.statusText);
+          setExpenses([]); // Prevent the .map() crash
+        }
+      } catch (error) {
+        console.error("A network error occurred:", error);
+        setExpenses([]); // Also prevent crash on network error
+      }
     }
     load();
   }, []);
